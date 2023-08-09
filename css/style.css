@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+  background-color:   rgb(47, 255, 0);
+} 
+
+.GAME{
+    width: 100%;
+    height: 92vh;
+    margin: 0 auto;
+    border-bottom: 15px solid rgb(47, 255, 0);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.betao{
+    position:absolute;
+    bottom: 0;
+    width: 6%;
+    
+    animation: betao-animacion 1.5s infinite linear; /*AQUI AUMENTA A DIFICULDADE*/
+}
+
+@keyframes betao-animacion{
+    from{
+        right: -82px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+
+.brunex{
+    width: 150px;
+    position: absolute;
+    width: 7.5%;
+    bottom: 0px;
+}
+
+.pulo{
+    animation: pulo 500ms infinite ease-out;   
+}
+
+@keyframes pulo{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.plinio1{
+    position: absolute;
+    width: 19%;
+    right: 1px;
+}
+
+.plinio2{
+    position: absolute;
+    width: 19%;
+    right: 800px;
+}
+
+.plinio3{
+    position: absolute;
+    width: 19%;
+    right: 499px;
+}
+
+.plinio4{
+    position: absolute;
+    width: 19%;
+    right: 270px;
+}
+
+
+.luis{
+    width: 3.75%;
+    position: absolute;
+    bottom: 0px;
+    animation: luis 45s infinite linear;
+
+}
+
+@keyframes luis{
+    from{
+        right: 0;
+    }
+
+    to{
+        right: 70%;
+    }
+}
+/* betao{left: 120px;}*/
+
+@media screen and (max-width: 768px) {
+    /* Estilos para telas menores que 768px */
+    .GAME {
+        height: 100%;
+        position: absolute;
+    }
+
+    .betao {
+        width: 15%;
+    }
+
+    .brunex {
+        width: 10%;
+    }
+
+    .plinio1,
+    .plinio2,
+    .plinio3,
+    .plinio4 {
+        width: 25%;
+        right:var();
+    }
+
+    .luis {
+        width: 6%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Estilos para telas menores que 480px */
+    .GAME {
+        height: 100%;
+    }
+
+    .betao {
+        width: 20%;
+    }
+
+    .brunex {
+        width: 15%;
+    }
+
+    .plinio1,
+    .plinio2,
+    .plinio3,
+    .plinio4 {
+        width: 30%;
+    }
+
+    .luis {
+        width: 8%;
+    }
+}
